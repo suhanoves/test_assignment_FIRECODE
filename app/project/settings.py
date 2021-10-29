@@ -29,6 +29,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # Third-side apps
+    'rest_framework',
+
     # MyApps
     'shops.apps.ShopsConfig',
 ]
