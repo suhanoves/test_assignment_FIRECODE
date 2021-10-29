@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 
 class City(models.Model):
@@ -75,6 +76,11 @@ class Shop(models.Model):
     closing_time = models.TimeField(
         verbose_name='время закрытия'
     )
+
+    @property
+    def is_open(self):
+        current_time = timezone.localtime(timezone.now()).time()
+        return self.opening_time <= current_time <= self.closing_time
 
     class Meta:
         verbose_name = 'магазин'
