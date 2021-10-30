@@ -1,7 +1,8 @@
 from rest_framework import viewsets
 
 from shops.models import City, Street, Shop
-from shops.serializers import CitySerializer, StreetSerializer, ShopSerializer
+from shops.serializers import CitySerializer, StreetSerializer, \
+    ShopCreateSerializer, ShopDetailSerializer
 
 
 class CityViewSet(viewsets.ReadOnlyModelViewSet):
@@ -25,4 +26,9 @@ class ShopViewSet(viewsets.ModelViewSet):
     API endpoint that allows shops to be viewed or edited.
     """
     queryset = Shop.objects.all()
-    serializer_class = ShopSerializer
+    serializer_class = ShopCreateSerializer
+
+    def get_serializer_class(self):
+        if self.action in ('list', 'retrieve',):
+            return ShopDetailSerializer
+        return super().get_serializer_class()  # for create/destroy/update
