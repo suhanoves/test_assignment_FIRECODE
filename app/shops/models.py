@@ -43,6 +43,7 @@ class Street(models.Model):
     class Meta:
         verbose_name = 'улица'
         verbose_name_plural = 'улицы'
+
         constraints = [
             models.UniqueConstraint(
                 fields=('name', 'city'),
@@ -100,6 +101,7 @@ class Shop(models.Model):
     class Meta:
         verbose_name = 'магазин'
         verbose_name_plural = 'магазины'
+
         constraints = [
             models.UniqueConstraint(
                 fields=('name', 'city', 'street', 'building'),
