@@ -23,6 +23,12 @@ class StreetSerializer(serializers.ModelSerializer):
         ]
 
 
+class ShopIdSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Shop
+        fields = ('id',)
+
+
 class ShopDetailSerializer(serializers.ModelSerializer):
     city = serializers.SlugRelatedField(slug_field='name', read_only=True)
     street = serializers.SlugRelatedField(slug_field='name', read_only=True)
