@@ -35,6 +35,7 @@ INSTALLED_APPS = [
 
     # MyApps
     'shops.apps.ShopsConfig',
+    'rest_api.apps.RestApiConfig',
 ]
 
 MIDDLEWARE = [
