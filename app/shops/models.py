@@ -1,3 +1,4 @@
+from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils import timezone
 
@@ -95,6 +96,16 @@ class Shop(models.Model):
                 name='closing_time_gt_opening_time'
             )
         ]
+
+    def clean(self, *args, **kwargs):
+        if self.street.city != self.city:
+            raise ValidationError(
+                {'city': 'указанная улица не принадлежит указанному городу'}
+            )
+
+    def save(self, *args, **kwargs):
+        self.full_clean()
+        return super().save(*args, **kwargs)
 
     def __str__(self):
         return self.name
