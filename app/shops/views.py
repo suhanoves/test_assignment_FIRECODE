@@ -1,3 +1,5 @@
+from django.db.models import Q
+from django.utils import timezone
 from rest_framework import generics, viewsets, serializers
 
 from shops.models import City, Street, Shop
@@ -44,8 +46,29 @@ class ShopViewSet(viewsets.ModelViewSet):
 
     queryset = Shop.objects.all()
     serializer_class = ShopCreateSerializer
+    filterset_fields = ['city', 'city__name', 'street', 'street__name']
 
     def get_serializer_class(self):
         if self.action in ('list', 'retrieve',):
             return ShopDetailSerializer
         return super().get_serializer_class()  # for create/destroy/update
+
+    def get_queryset(self):
+
+        queryset = super().get_queryset()
+
+        is_open = self.request.query_params.get('open')
+        current_time = timezone.localtime(timezone.now()).time()
+
+        if is_open == '1':
+            queryset = queryset.filter(
+                opening_time__lte=current_time,
+                closing_time__gte=current_time
+            )
+        elif is_open == '0':
+            queryset = queryset.filter(
+                Q(opening_time__gt=current_time)
+                | Q(closing_time__lt=current_time)
+            )
+
+        return queryset
