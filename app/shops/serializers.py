@@ -63,15 +63,18 @@ class ShopCreateSerializer(serializers.ModelSerializer):
         return super().to_representation(instance)
 
     def validate(self, data):
-        # Check that opening_time is before closing_time.
-        if data['opening_time'] > data['closing_time']:
-            raise ValidationError(
-                'время закрытия магазина должно быть позже времени открытия'
-            )
+        errors = {}
+
         # Checks that the street belongs to the city
         if data['street'].city != data['city']:
-            raise ValidationError(
-                'указанная улица не принадлежит указанному городу'
+            errors['city'] = 'указанная улица не принадлежит указанному городу'
+
+        # Check that opening_time is before closing_time.
+        if data['opening_time'] > data['closing_time']:
+            errors['opening_time'] = errors['closing_time'] = (
+                'время закрытия магазина должно быть позже времени открытия'
             )
 
+        if errors:
+            raise ValidationError(errors)
         return data
