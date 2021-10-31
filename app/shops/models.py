@@ -19,7 +19,14 @@ class City(models.Model):
         return self.name
 
 
+class StreetManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().select_related('city')
+
+
 class Street(models.Model):
+    objects = StreetManager()
+
     name = models.CharField(
         verbose_name='название улицы',
         max_length=100,
@@ -44,10 +51,17 @@ class Street(models.Model):
         ]
 
     def __str__(self):
-        return self.name
+        return f'{self.name} ({self.city})'
+
+
+class ShopManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().select_related('city', 'street')
 
 
 class Shop(models.Model):
+    objects = ShopManager()
+
     name = models.CharField(
         verbose_name='название магазина',
         max_length=150,
