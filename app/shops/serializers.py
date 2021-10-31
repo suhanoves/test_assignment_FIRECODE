@@ -55,6 +55,13 @@ class ShopCreateSerializer(serializers.ModelSerializer):
             ),
         ]
 
+    def to_representation(self, instance):
+        """Return only shop_id after creating a new store"""
+        if self.context['request'].method == 'POST':
+            serializer = ShopIdSerializer(instance)
+            return serializer.data
+        return super().to_representation(instance)
+
     def validate(self, data):
         # Check that opening_time is before closing_time.
         if data['opening_time'] > data['closing_time']:
