@@ -3,7 +3,7 @@ from rest_framework import routers
 
 from rest_api.views import CityViewSet, StreetViewSet, ShopViewSet, StreetOfCityView
 
-router = routers.DefaultRouter()
+router = routers.SimpleRouter()
 router.register(r'city', CityViewSet)
 router.register(r'street', StreetViewSet)
 router.register(r'shop', ShopViewSet)
