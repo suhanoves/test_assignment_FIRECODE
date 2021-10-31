@@ -1,7 +1,7 @@
 from django.urls import include, path
 from rest_framework import routers
 
-from shops.views import CityViewSet, StreetViewSet, ShopViewSet, StreetOfCityView
+from rest_api.views import CityViewSet, StreetViewSet, ShopViewSet, StreetOfCityView
 
 router = routers.DefaultRouter()
 router.register(r'city', CityViewSet)
