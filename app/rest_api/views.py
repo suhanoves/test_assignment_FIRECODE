@@ -2,12 +2,12 @@ from django.db.models import Q
 from django.utils import timezone
 from rest_framework import generics, viewsets, serializers
 
-from shops.models import City, Street, Shop
 from rest_api.serializers import CitySerializer, StreetSerializer, \
     ShopCreateSerializer, ShopDetailSerializer
+from shops.models import City, Street, Shop
 
 
-class CityViewSet(viewsets.ReadOnlyModelViewSet):
+class CityViewSet(viewsets.ModelViewSet):
     """API endpoint that allows cities to be viewed or edited."""
 
     queryset = City.objects.all().order_by('name')
