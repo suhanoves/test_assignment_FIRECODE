@@ -18,6 +18,8 @@ services:
     build: ./app/
     container_name: firecode_django
     env_file: ./.env
+    volumes:
+      - firecode_static:/usr/src/app/static/
     networks:
       - firecode
     working_dir: /usr/src/app/
@@ -30,6 +32,8 @@ services:
   nginx:
     build: ./nginx
     container_name: firecode_nginx
+    volumes:
+      - firecode_static:/usr/src/app/static/
     networks:
       - firecode
     ports:
@@ -43,3 +47,4 @@ networks:
 
 volumes:
   firecode_db:
+  firecode_static:
