@@ -1,0 +1,701 @@
+[
+{
+  "model": "shops.city",
+  "pk": 1,
+  "fields": {
+    "name": "Москва"
+  }
+},
+{
+  "model": "shops.city",
+  "pk": 2,
+  "fields": {
+    "name": "Ростов-на-Дону"
+  }
+},
+{
+  "model": "shops.city",
+  "pk": 3,
+  "fields": {
+    "name": "Архангельск"
+  }
+},
+{
+  "model": "shops.street",
+  "pk": 1,
+  "fields": {
+    "name": "Ходынский бульвар",
+    "city": 1
+  }
+},
+{
+  "model": "shops.street",
+  "pk": 2,
+  "fields": {
+    "name": "Манежная площадь",
+    "city": 1
+  }
+},
+{
+  "model": "shops.street",
+  "pk": 3,
+  "fields": {
+    "name": "Киевского вокзала площадь",
+    "city": 1
+  }
+},
+{
+  "model": "shops.street",
+  "pk": 4,
+  "fields": {
+    "name": "Красная площадь",
+    "city": 1
+  }
+},
+{
+  "model": "shops.street",
+  "pk": 5,
+  "fields": {
+    "name": "Земляной вал",
+    "city": 1
+  }
+},
+{
+  "model": "shops.street",
+  "pk": 6,
+  "fields": {
+    "name": "Пресненская набережная",
+    "city": 1
+  }
+},
+{
+  "model": "shops.street",
+  "pk": 7,
+  "fields": {
+    "name": "Михаила Нагибина проспект",
+    "city": 2
+  }
+},
+{
+  "model": "shops.street",
+  "pk": 8,
+  "fields": {
+    "name": "Будённовский проспект",
+    "city": 2
+  }
+},
+{
+  "model": "shops.street",
+  "pk": 9,
+  "fields": {
+    "name": "Пойменная",
+    "city": 2
+  }
+},
+{
+  "model": "shops.street",
+  "pk": 10,
+  "fields": {
+    "name": "Космонавтов проспект",
+    "city": 2
+  }
+},
+{
+  "model": "shops.street",
+  "pk": 11,
+  "fields": {
+    "name": "Малиновского",
+    "city": 2
+  }
+},
+{
+  "model": "shops.street",
+  "pk": 12,
+  "fields": {
+    "name": "Троицкий проспект",
+    "city": 3
+  }
+},
+{
+  "model": "shops.street",
+  "pk": 13,
+  "fields": {
+    "name": "Ленинградский проспект",
+    "city": 3
+  }
+},
+{
+  "model": "shops.street",
+  "pk": 14,
+  "fields": {
+    "name": "Поморская",
+    "city": 3
+  }
+},
+{
+  "model": "shops.street",
+  "pk": 15,
+  "fields": {
+    "name": "Никольский проспект",
+    "city": 3
+  }
+},
+{
+  "model": "shops.shop",
+  "pk": 1,
+  "fields": {
+    "name": "ТРЦ Авиапарк",
+    "city": 1,
+    "street": 1,
+    "building": "4",
+    "opening_time": "10:00:00",
+    "closing_time": "22:00:00"
+  }
+},
+{
+  "model": "shops.shop",
+  "pk": 2,
+  "fields": {
+    "name": "Охотный ряд",
+    "city": 1,
+    "street": 2,
+    "building": "1, стр.2",
+    "opening_time": "10:00:00",
+    "closing_time": "22:00:00"
+  }
+},
+{
+  "model": "shops.shop",
+  "pk": 4,
+  "fields": {
+    "name": "ТЦ Европейский",
+    "city": 1,
+    "street": 3,
+    "building": "2",
+    "opening_time": "10:00:00",
+    "closing_time": "22:00:00"
+  }
+},
+{
+  "model": "shops.shop",
+  "pk": 5,
+  "fields": {
+    "name": "ГУМ",
+    "city": 1,
+    "street": 4,
+    "building": "3",
+    "opening_time": "10:00:00",
+    "closing_time": "22:00:00"
+  }
+},
+{
+  "model": "shops.shop",
+  "pk": 6,
+  "fields": {
+    "name": "ТРЦ Атриум",
+    "city": 1,
+    "street": 5,
+    "building": "33",
+    "opening_time": "10:00:00",
+    "closing_time": "23:00:00"
+  }
+},
+{
+  "model": "shops.shop",
+  "pk": 7,
+  "fields": {
+    "name": "Афимолл Сити",
+    "city": 1,
+    "street": 6,
+    "building": "2",
+    "opening_time": "10:00:00",
+    "closing_time": "22:00:00"
+  }
+},
+{
+  "model": "shops.shop",
+  "pk": 8,
+  "fields": {
+    "name": "ТРК Горизонт",
+    "city": 2,
+    "street": 7,
+    "building": "32/2",
+    "opening_time": "10:00:00",
+    "closing_time": "22:00:00"
+  }
+},
+{
+  "model": "shops.shop",
+  "pk": 9,
+  "fields": {
+    "name": "ЦУМ",
+    "city": 2,
+    "street": 8,
+    "building": "30/46",
+    "opening_time": "10:00:00",
+    "closing_time": "20:00:00"
+  }
+},
+{
+  "model": "shops.shop",
+  "pk": 10,
+  "fields": {
+    "name": "Мегамаг",
+    "city": 2,
+    "street": 9,
+    "building": "1",
+    "opening_time": "08:00:00",
+    "closing_time": "22:00:00"
+  }
+},
+{
+  "model": "shops.shop",
+  "pk": 11,
+  "fields": {
+    "name": "ТРЦ Вавилон",
+    "city": 2,
+    "street": 10,
+    "building": "2/2",
+    "opening_time": "10:00:00",
+    "closing_time": "22:00:00"
+  }
+},
+{
+  "model": "shops.shop",
+  "pk": 12,
+  "fields": {
+    "name": "Читай-город",
+    "city": 2,
+    "street": 11,
+    "building": "25",
+    "opening_time": "10:00:00",
+    "closing_time": "22:00:00"
+  }
+},
+{
+  "model": "shops.shop",
+  "pk": 13,
+  "fields": {
+    "name": "Детский мир",
+    "city": 2,
+    "street": 10,
+    "building": "10",
+    "opening_time": "09:00:00",
+    "closing_time": "21:00:00"
+  }
+},
+{
+  "model": "shops.shop",
+  "pk": 14,
+  "fields": {
+    "name": "Европарк",
+    "city": 3,
+    "street": 12,
+    "building": "17",
+    "opening_time": "10:00:00",
+    "closing_time": "21:00:00"
+  }
+},
+{
+  "model": "shops.shop",
+  "pk": 15,
+  "fields": {
+    "name": "Петромост",
+    "city": 3,
+    "street": 13,
+    "building": "255",
+    "opening_time": "00:00:00",
+    "closing_time": "23:59:59"
+  }
+},
+{
+  "model": "shops.shop",
+  "pk": 16,
+  "fields": {
+    "name": "ЦУМ",
+    "city": 3,
+    "street": 14,
+    "building": "9",
+    "opening_time": "10:00:00",
+    "closing_time": "21:00:00"
+  }
+},
+{
+  "model": "shops.shop",
+  "pk": 17,
+  "fields": {
+    "name": "М.Видео",
+    "city": 3,
+    "street": 13,
+    "building": "38",
+    "opening_time": "10:00:00",
+    "closing_time": "21:00:00"
+  }
+},
+{
+  "model": "shops.shop",
+  "pk": 18,
+  "fields": {
+    "name": "Спортмастер",
+    "city": 3,
+    "street": 13,
+    "building": "38",
+    "opening_time": "10:00:00",
+    "closing_time": "22:00:00"
+  }
+},
+{
+  "model": "shops.shop",
+  "pk": 19,
+  "fields": {
+    "name": "DNS",
+    "city": 3,
+    "street": 15,
+    "building": "60",
+    "opening_time": "10:00:00",
+    "closing_time": "20:00:00"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add город",
+    "content_type": 7,
+    "codename": "add_city"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change город",
+    "content_type": 7,
+    "codename": "change_city"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete город",
+    "content_type": 7,
+    "codename": "delete_city"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view город",
+    "content_type": 7,
+    "codename": "view_city"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add улица",
+    "content_type": 8,
+    "codename": "add_street"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change улица",
+    "content_type": 8,
+    "codename": "change_street"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete улица",
+    "content_type": 8,
+    "codename": "delete_street"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view улица",
+    "content_type": 8,
+    "codename": "view_street"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add магазин",
+    "content_type": 9,
+    "codename": "add_shop"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change магазин",
+    "content_type": 9,
+    "codename": "change_shop"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete магазин",
+    "content_type": 9,
+    "codename": "delete_shop"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view магазин",
+    "content_type": 9,
+    "codename": "view_shop"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$PNhKrHMwGSgE5eof2qddmp$onZ9Tf6U4XEkHIvanxnKW1l0oqF46cfwvBM9eMU89bo=",
+    "last_login": "2021-11-01T04:38:27.378Z",
+    "is_superuser": true,
+    "username": "root",
+    "first_name": "",
+    "last_name": "",
+    "email": "root@root.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-11-01T04:38:01.069Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
