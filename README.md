@@ -18,11 +18,11 @@ docker-compose up -d
 ```
 
 ## Информация о доступах
-
-Доступ в админку:
-
-* http://127.0.0.1:8088/admin
-* username: `root`
-* password: `111`
+* Доступ к API:
+  * http://127.0.0.1:8088/api/v1/
+* Доступ в админку:
+  * http://127.0.0.1:8088/admin
+  * username: `root`
+  * password: `111`
 
 ## Описание проекта
