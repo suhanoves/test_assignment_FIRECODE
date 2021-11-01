@@ -1,5 +1,6 @@
 import json
 
+from django.db.models import ObjectDoesNotExist
 from django.test import TestCase
 from django.urls import reverse
 from rest_framework import status
@@ -94,10 +95,7 @@ class UpdateCityTest(TestCase):
 
     def test_update_valid_city(self):
         response = client.put(
-            reverse(
-                'city-detail',
-                kwargs={'pk': self.moscow.pk}
-            ),
+            reverse('city-detail', kwargs={'pk': self.moscow.pk}),
             data=json.dumps(self.valid_update_city_data),
             content_type='application/json'
         )
@@ -117,3 +115,30 @@ class UpdateCityTest(TestCase):
         )
 
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+
+
+class DeleteCityTest(TestCase):
+    def setUp(self):
+        self.moscow = City.objects.create(name='Москва')
+
+    def test_delete_valid_city(self):
+        response = client.get(
+            reverse('city-detail', kwargs={'pk': self.moscow.pk})
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+        response = client.delete(
+            reverse('city-detail', kwargs={'pk': self.moscow.pk})
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
+        with self.assertRaises(ObjectDoesNotExist):
+            City.objects.get(pk=self.moscow.pk)
+
+    def test_delete_invalid_city(self):
+        response = client.delete(
+            reverse('city-detail', kwargs={'pk': 50}),
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
